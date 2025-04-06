@@ -1,0 +1,86 @@
+/* [ Site wide control ] */
+*{
+    padding:0;
+    margin:0;
+    cursor:none;
+}
+
+/* X X X X X [Display settings] X X X X X */
+
+/* [ - - [ MASTER ] - - ]*/
+.PRESISTENTS{display:show;}
+
+/* [ Loader ]*/
+#Loader{
+    display:none;
+
+    position:absolute;
+    z-index:100;
+    width:100%;
+    height:100%;
+    background-color:black;
+}
+
+/* [ Bars ] */
+#Bars{
+    position:absolute;
+    z-index:99;
+    height: 10%;
+    width: 100%;
+    background-color:red;
+}
+
+#Bars nav{top:0}
+#Bars footer{bottom:0}
+
+/* children */
+#nav_home{}
+#nav_about{}
+#nav_projects{}
+#nav_misc{}
+
+/* [Muse] */
+#muse{}
+
+/* children */
+#progress_bar{}
+#progress_runner{}
+#audio_controls{}
+
+
+/* [ - - [ MASTER ] - - ]*/
+.CORE{display:show;}
+
+/* [ Home ] */
+#Home{display:show;}
+
+/* children */
+#h_label{}
+#h_text{}
+#h_side{}
+
+
+/* [ About ] */
+#About{display:none;}
+
+/* children */
+#a_lable{}
+#a_box{}
+
+/* [ Projects ] */
+#Projects{display:none;}
+
+/* children */
+#p_lable{}
+#p_box{}
+#a_projects{}
+#c_projects{}
+#w_projects{}
+
+
+/* [ Misc ] */
+#Misc{display:none;}
+
+/* children */
+#m_lable{}
+#m_box{}
