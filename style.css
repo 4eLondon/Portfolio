@@ -5,10 +5,40 @@
     cursor:none;
 }
 
+
 /* X X X X X [Display settings] X X X X X */
 
 /* [ - - [ MASTER ] - - ]*/
 .PRESISTENTS{display:show;}
+
+
+/* [ Cursor ]*/
+.cursor {
+    position: fixed;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #ffffff;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    transition: width 0.3s, height 0.3s, background-color 0.3s;
+    z-index: 100;
+}
+
+
+/* children */
+.cursor-trailer {
+    position: fixed;
+    width: 40px;
+    height: 40px;
+    border: 2px solid #969696;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    opacity: 0.5;
+    transition: width 0.5s, height 0.5s, opacity 0.5s;
+    z-index: 100;
+}
 
 /* [ Loader ]*/
 #Loader{
@@ -22,16 +52,29 @@
 }
 
 /* [ Bars ] */
-#Bars{
-    position:absolute;
-    z-index:99;
-    height: 10%;
+.Bars{
+    display:show;
+    height: 100%;
     width: 100%;
-    background-color:red;
+    
 }
 
-#Bars nav{top:0}
-#Bars footer{bottom:0}
+/* ( Navigaation ) */
+#navi{
+    position: absolute;
+    height: 5%;
+    width: 100%;
+    background-color: rgb(0, 122, 230);
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#navi li{
+       display: inline-block;
+         padding: 10px 20px;
+}
 
 /* children */
 #nav_home{}
@@ -39,14 +82,43 @@
 #nav_projects{}
 #nav_misc{}
 
-/* [Muse] */
-#muse{}
+/* ( Footer ) */
+#foot{position: fixed;
+    height: 10%;
+    width: 100%;
+    background-color: rgb(65, 75, 83);
+    bottom: 0;
+    }
 
 /* children */
-#progress_bar{}
-#progress_runner{}
-#audio_controls{}
+/* [Muse] */
+#Muse{display: show;}
 
+/* children */
+#progress_bar{ 
+    position: absolute;
+    right: 50%;
+    width: 60%; 
+    height: 15px; 
+    margin: 15px;
+    background-color: blueviolet;
+    transform: translateX(50%);
+border-radius: 20px;}
+
+#progress_runner{width: 97%; 
+    position:relative; 
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -55%);
+    height: 4px; 
+    background-color: rgb(255, 255, 255); 
+    border-radius: 10px;}
+
+#audio_controls{position: absolute;
+    transform: translate(-50%, -50%);
+    top:50%;
+     left:50% }  
+     #audio_controls img{padding: 20px;}
 
 /* [ - - [ MASTER ] - - ]*/
 .CORE{display:show;}
